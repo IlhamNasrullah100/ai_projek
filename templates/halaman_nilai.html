@@ -1,0 +1,252 @@
+{% extends 'index.html' %}
+{% block content %}
+    <div class="jumbotron" style="width: 95%; margin-left: 2.5%;">
+        <div class="container">
+            <h1 class="display-3">Apa selera filmmu?</h1>
+            <p class="lead">Nilai setiap genre</p>
+            <hr width="100%" color="black">
+            <form action="{{ url_for('rekomendasi') }}" method="POST">
+                <div class="row">
+                    <div class="col-sm">
+                        <img src="../static/17081.jpg" alt="action" width="100%">
+                    </div>
+                    <div class="col-sm">
+                        <p style="color: #192577; font-size: 45px;">Action</p>
+    
+                        <input type="radio" name="Action" value="0" checked>Saya tidak suka genre ini!<br>
+                        <input type="radio" name="Action" value="1"> 1<br>
+                        <input type="radio" name="Action" value="2"> 2<br>
+                        <input type="radio" name="Action" value="3"> 3<br>
+                        <input type="radio" name="Action" value="4"> 4<br>
+                        <input type="radio" name="Action" value="5"> 5
+                    </div>
+                </div>
+
+                <hr width="100%" color="black">
+    
+                <div class="row">
+                    <div class="col-sm">
+                        <img src="../static/pexels-ahmad-syahrir.jpg" alt="adventure" width="100%">
+                    </div>
+                    <div class="col-sm">
+                        <p style="color: #192577; font-size: 45px;">Adventure</p>
+                        
+                        <input type="radio" name="Adventure" value="0" checked>Saya tidak suka genre ini!<br>
+                        <input type="radio" name="Adventure" value="1"> 1<br>
+                        <input type="radio" name="Adventure" value="2"> 2<br>
+                        <input type="radio" name="Adventure" value="3"> 3<br>
+                        <input type="radio" name="Adventure" value="4"> 4<br>
+                        <input type="radio" name="Adventure" value="5"> 5 
+                    </div>
+                </div>
+
+                <hr width="100%" color="black">
+    
+                <h1>Mohon berikan peringkat pada setiap genre berdasarkan preferensi Anda</h1>
+                <form action="{{ url_for('rekomendasi') }}" method="POST">
+            
+                    <div>
+                        <p> <strong><font size="4" color="black">Berikan peringkat Anda untuk genre <font color="Maroon">Children's </font>ini?</strong><br/>Contoh: Alice In Wonderland</p>
+            
+                        <input type="radio" name="Children" value="0" checked>Saya tidak suka genre ini!<br>
+                        <input type="radio" name="Children" value="1"> 1<br>
+                        <input type="radio" name="Children" value="2"> 2<br>
+                        <input type="radio" name="Children" value="3"> 3<br>
+                        <input type="radio" name="Children" value="4"> 4<br>
+                        <input type="radio" name="Children" value="5"> 5
+                    </div>
+            
+                    <div>
+                        <p> <strong><font size="4" color="black">Berikan peringkat Anda untuk genre <font color="Maroon">Animation </font>ini?</strong><br/>Contoh: Toy Story</p>
+            
+                        <input type="radio" name="Animation" value="0" checked>Saya tidak suka genre ini!<br>
+                        <input type="radio" name="Animation" value="1"> 1<br>
+                        <input type="radio" name="Animation" value="2"> 2<br>
+                        <input type="radio" name="Animation" value="3"> 3<br>
+                        <input type="radio" name="Animation" value="4"> 4<br>
+                        <input type="radio" name="Animation" value="5"> 5
+                    </div>
+
+                    <hr width="100%" color="black">
+            
+                    <div>
+                        <p> <strong><font size="4" color="black">Berikan peringkat Anda untuk genre <font color="Maroon">Documentary </font>ini?</strong><br/>Contoh: The Decline of Western Civilizations</p>
+            
+                        <input type="radio" name="Documentary" value="0" checked>Saya tidak suka genre ini!<br>
+                        <input type="radio" name="Documentary" value="1"> 1<br>
+                        <input type="radio" name="Documentary" value="2"> 2<br>
+                        <input type="radio" name="Documentary" value="3"> 3<br>
+                        <input type="radio" name="Documentary" value="4"> 4<br>
+                        <input type="radio" name="Documentary" value="5"> 5
+                    </div>
+            
+                    <div>
+                        <p> <strong><font size="4" color="black">Berikan peringkat Anda untuk genre <font color="Maroon">Comedy </font>ini?</strong><br/>Contoh: Leo 2023</p>
+            
+                        <input type="radio" name="Comedy" value="0" checked>Saya tidak suka genre ini!<br>
+                        <input type="radio" name="Comedy" value="1"> 1<br>
+                        <input type="radio" name="Comedy" value="2"> 2<br>
+                        <input type="radio" name="Comedy" value="3"> 3<br>
+                        <input type="radio" name="Comedy" value="4"> 4<br>
+                        <input type="radio" name="Comedy" value="5"> 5
+                    </div>
+
+                    <hr width="100%" color="black">
+            
+                    <div>
+                        <p> <strong><font size="4" color="black">Berikan peringkat Anda untuk genre <font color="Maroon">Crime </font>ini?</strong><br/>Contoh: Goodfellas</p>
+            
+                        <input type="radio" name="Crime" value="0" checked>Saya tidak suka genre ini!<br>
+                        <input type="radio" name="Crime" value="1"> 1<br>
+                        <input type="radio" name="Crime" value="2"> 2<br>
+                        <input type="radio" name="Crime" value="3"> 3<br>
+                        <input type="radio" name="Crime" value="4"> 4<br>
+                        <input type="radio" name="Crime" value="5"> 5
+                    </div>
+            
+                    <div>
+                        <p> <strong><font size="4" color="black">Berikan peringkat Anda untuk genre <font color="Maroon">Drama </font>ini?</strong><br/>Contoh: The Godfather</p>
+            
+                        <input type="radio" name="Drama" value="0" checked>Saya tidak suka genre ini!<br>
+                        <input type="radio" name="Drama" value="1"> 1<br>
+                        <input type="radio" name="Drama" value="2"> 2<br>
+                        <input type="radio" name="Drama" value="3"> 3<br>
+                        <input type="radio" name="Drama" value="4"> 4<br>
+                        <input type="radio" name="Drama" value="5"> 5
+                    </div>
+
+                    <hr width="100%" color="black">
+            
+                    <div>
+                        <p> <strong><font size="4" color="black">Berikan peringkat Anda untuk genre <font color="Maroon">Fantasy </font>ini?</strong><br/>Contoh: Harry Potter</p>
+            
+                        <input type="radio" name="Fantasy" value="0" checked>Saya tidak suka genre ini!<br>
+                        <input type="radio" name="Fantasy" value="1"> 1<br>
+                        <input type="radio" name="Fantasy" value="2"> 2<br>
+                        <input type="radio" name="Fantasy" value="3"> 3<br>
+                        <input type="radio" name="Fantasy" value="4"> 4<br>
+                        <input type="radio" name="Fantasy" value="5"> 5
+                    </div>
+            
+                    <div>
+                        <p> <strong><font size="4" color="black">Berikan peringkat Anda untuk genre <font color="Maroon">Film Noir </font>ini?</strong><br/>Contoh: The Black Sheep</p>
+            
+                        <input type="radio" name="FilmNoir" value="0" checked>Saya tidak suka genre ini!<br>
+                        <input type="radio" name="FilmNoir" value="1"> 1<br>
+                        <input type="radio" name="FilmNoir" value="2"> 2<br>
+                        <input type="radio" name="FilmNoir" value="3"> 3<br>
+                        <input type="radio" name="FilmNoir" value="4"> 4<br>
+                        <input type="radio" name="FilmNoir" value="5"> 5
+                    </div>
+
+                    <hr width="100%" color="black">
+            
+                    <div>
+                        <p> <strong><font size="4" color="black">Berikan peringkat Anda untuk genre <font color="Maroon">Horror </font>ini?</strong><br/>Contoh: The Shining</p>
+            
+                        <input type="radio" name="Horror" value="0" checked>Saya tidak suka genre ini!<br>
+                        <input type="radio" name="Horror" value="1"> 1<br>
+                        <input type="radio" name="Horror" value="2"> 2<br>
+                        <input type="radio" name="Horror" value="3"> 3<br>
+                        <input type="radio" name="Horror" value="4"> 4<br>
+                        <input type="radio" name="Horror" value="5"> 5
+                    </div>
+            
+                    <div>
+                        <p> <strong><font size="4" color="black">Berikan peringkat Anda untuk genre <font color="Maroon">Mystery </font>ini?</strong><br/>Contoh: Memento</p>
+            
+                        <input type="radio" name="Mystery" value="0" checked>Saya tidak suka genre ini!<br>
+                        <input type="radio" name="Mystery" value="1"> 1<br>
+                        <input type="radio" name="Mystery" value="2"> 2<br>
+                        <input type="radio" name="Mystery" value="3"> 3<br>
+                        <input type="radio" name="Mystery" value="4"> 4<br>
+                        <input type="radio" name="Mystery" value="5"> 5
+                    </div>
+
+                    <hr width="100%" color="black">
+            
+                    <div>
+                        <p> <strong><font size="4" color="black">Berikan peringkat Anda untuk genre <font color="Maroon">Sci-fi </font>ini?</strong><br/>Contoh: Star Wars</p>
+            
+                        <input type="radio" name="SciFi" value="0" checked>Saya tidak suka genre ini!<br>
+                        <input type="radio" name="SciFi" value="1"> 1<br>
+                        <input type="radio" name="SciFi" value="2"> 2<br>
+                        <input type="radio" name="SciFi" value="3"> 3<br>
+                        <input type="radio" name="SciFi" value="4"> 4<br>
+                        <input type="radio" name="SciFi" value="5"> 5
+                    </div>
+
+                    <hr width="100%" color="black">
+            
+                    <div>
+                        <p> <strong><font size="4" color="black">Berikan peringkat Anda untuk genre <font color="Maroon">Romance </font>ini?</strong><br/>Contoh: The Notebook</p>
+            
+                        <input type="radio" name="Romance" value="0" checked>Saya tidak suka genre ini!<br>
+                        <input type="radio" name="Romance" value="1"> 1<br>
+                        <input type="radio" name="Romance" value="2"> 2<br>
+                        <input type="radio" name="Romance" value="3"> 3<br>
+                        <input type="radio" name="Romance" value="4"> 4<br>
+                        <input type="radio" name="Romance" value="5"> 5
+                    </div>
+
+                    <hr width="100%" color="black">
+                    
+                    <div>
+                        <p> <strong><font size="4" color="black">Berikan peringkat Anda untuk genre <font color="Maroon">War </font>ini?</strong><br/>Contoh: Braveheart</p>
+            
+                        <input type="radio" name="War" value="0" checked>Saya tidak suka genre ini!<br>
+                        <input type="radio" name="War" value="1"> 1<br>
+                        <input type="radio" name="War" value="2"> 2<br>
+                        <input type="radio" name="War" value="3"> 3<br>
+                        <input type="radio" name="War" value="4"> 4<br>
+                        <input type="radio" name="War" value="5"> 5
+                    </div>
+
+                    <hr width="100%" color="black">
+            
+                    <div>
+                        <p> <strong><font size="4" color="black">Berikan peringkat Anda untuk genre <font color="Maroon">Western </font>ini?</strong><br/>Contoh: The Good, The Bad, and The Ugly</p>
+            
+                        <input type="radio" name="Western" value="0" checked>Saya tidak suka genre ini!<br>
+                        <input type="radio" name="Western" value="1"> 1<br>
+                        <input type="radio" name="Western" value="2"> 2<br>
+                        <input type="radio" name="Western" value="3"> 3<br>
+                        <input type="radio" name="Western" value="4"> 4<br>
+                        <input type="radio" name="Adventure" value="5"> 5
+                    </div>
+
+                    <hr width="100%" color="black">
+            
+                    <div>
+                        <p> <strong><font size="4" color="black">Berikan peringkat Anda untuk genre <font color="Maroon">Thriller </font>ini?</strong><br/>Contoh: Seven</p>
+            
+                        <input type="radio" name="Thriller" value="0" checked>Saya tidak suka genre ini!<br>
+                        <input type="radio" name="Thriller" value="1"> 1<br>
+                        <input type="radio" name="Thriller" value="2"> 2<br>
+                        <input type="radio" name="Thriller" value="3"> 3<br>
+                        <input type="radio" name="Thriller" value="4"> 4<br>
+                        <input type="radio" name="Thriller" value="5"> 5
+                    </div>
+
+                    <div>
+                        <p> <strong><font size="4" color="black">Berikan peringkat Anda untuk genre <font color="Maroon">Musical </font>ini?</strong><br/>Contoh: La La Land</p>
+            
+                        <input type="radio" name="Musical" value="0" checked>Saya tidak suka genre ini!<br>
+                        <input type="radio" name="Musical" value="1"> 1<br>
+                        <input type="radio" name="Musical" value="2"> 2<br>
+                        <input type="radio" name="Musical" value="3"> 3<br>
+                        <input type="radio" name="Musical" value="4"> 4<br>
+                        <input type="radio" name="Musical" value="5"> 5
+                    </div>
+
+                <hr width="100%" color="black">
+    
+                <div>
+                <h3><font color="midnightblue">Jika Anda yakin dengan peringkat ini, klik tombolnya</h3>
+                </div>
+                <button type="submit" class="btn btn-dark btn-lg" style="background-color: #192577;"><font color="white"><strong>Rekomendasi</strong></button>
+    
+            </form>
+        </div>
+    </div>
+{% endblock %}
